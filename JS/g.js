@@ -122,7 +122,7 @@ F.style=`
     width:100px;
     height:100px;
     color:white;
-    background-color:#e18e9c;
+    background-color:#D9255D;
     border-radius:5px;
     display:flex;
     justify-content:center;
@@ -210,5 +210,6 @@ container.appendChild(res);
 document.body.appendChild(container);
 
 document.body.appendChild(logo);
+
 
 
