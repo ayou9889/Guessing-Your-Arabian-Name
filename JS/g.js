@@ -173,8 +173,7 @@ btn.style=`
     font-weight:600;
 `;
 btn.addEventListener("click",()=>{
-    fetch(`/get/json/${select.value}65${(isMale ? "M":"F")}.json`).then((d)=>{
-        // console.log(d.json());
+    fetch(`https://oufaddoul.com/Guessing-Your-Arabian-Name/get/json/${select.value}65${(isMale ? "M":"F")}.json`).then((d)=>{
         return d.json();
     }).then((data)=>{
         console.log(data);
@@ -182,7 +181,6 @@ btn.addEventListener("click",()=>{
         let isF=false;
         data.forEach(v => {
             if(v.enName.replace(/\d/,"").trim().length === Number(n.value) && v.arName.slice(-1) == selectL.value){
-                // res.innerHTML+=v.enName+" ";
                 const lp=(v.info === "Alternate transcription of ")?"":`<p style="font-style: italic;">${v.info}</p>`
                 res.innerHTML+=`
                     <div style="padding:7px;background-color:white;border-radius:5px;color:black;display:flex;flex-direction:column;align-items:center;gap:7px;">
@@ -210,4 +208,5 @@ container.appendChild(gend);
 container.appendChild(btn);
 container.appendChild(res);
 document.body.appendChild(container);
+
 document.body.appendChild(logo);
