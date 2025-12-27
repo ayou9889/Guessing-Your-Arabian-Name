@@ -176,7 +176,6 @@ btn.addEventListener("click",()=>{
     fetch(`https://oufaddoul.com/Guessing-Your-Arabian-Name/get/json/${select.value}65${(isMale ? "M":"F")}.json`).then((d)=>{
         return d.json();
     }).then((data)=>{
-        console.log(data);
         res.innerHTML="";
         let isF=false;
         data.forEach(v => {
@@ -210,3 +209,4 @@ container.appendChild(res);
 document.body.appendChild(container);
 
 document.body.appendChild(logo);
+
